@@ -42,6 +42,6 @@
   "dependencies": {
     "@cocreate/docs": "^1.7.13",
     "@cocreate/uuid": "^1.4.11",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^9.0.0"
   }
 }
