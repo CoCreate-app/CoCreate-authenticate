@@ -1,0 +1,47 @@
+{
+  "name": "@cocreate/authenticate",
+  "version": "1.0.0",
+  "description": "A simple authenticate component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "keywords": [
+    "authenticate",
+    "cocreate",
+    "low-code-framework",
+    "no-code-framework",
+    "cocreatejs",
+    "cocreatejs-component",
+    "cocreate-framework",
+    "no-code",
+    "low-code",
+    "collaborative-framework",
+    "realtime",
+    "realtime-framework",
+    "collaboration",
+    "shared-editing",
+    "html5-framework",
+    "javascript-framework"
+  ],
+  "scripts": {
+    "start": "npx webpack --config webpack.config.js --watch",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js",
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCreate-app/CoCreate-authenticate.git"
+  },
+  "authenticateor": "CoCreate LLC",
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-authenticate/issues"
+  },
+  "main": "./src/index.js",
+  "homepage": "https://cocreate.app/docs/authenticate",
+  "dependencies": {
+    "@cocreate/docs": "^1.7.13",
+    "@cocreate/uuid": "^1.4.11",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
