@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.2...v1.0.3) (2023-06-04)
+
+
+### Bug Fixes
+
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([1483084](https://github.com/CoCreate-app/CoCreate-authenticate/commit/14830848bf488e8e5139bec35ea44a175905f164))
+
 ## [1.0.2](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.1...v1.0.2) (2023-06-04)
 
 
