@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.1...v1.0.2) (2023-06-04)
+
+
+### Bug Fixes
+
+* [@v3](https://github.com/v3) ([b46373a](https://github.com/CoCreate-app/CoCreate-authenticate/commit/b46373af9d2558e685ac873f1b78897f2ddc7941))
+* html formating ([26bb115](https://github.com/CoCreate-app/CoCreate-authenticate/commit/26bb1154483ace18843dc775d98e83421bd6ed09))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.0...v1.0.1) (2023-06-01)
 
 
