@@ -1,102 +1,125 @@
-const jwt = require("jsonwebtoken")
-const uid = require("@cocreate/uuid")
+const jwt = require('jsonwebtoken');
 
-class CoCreateAuthenticate {
-    /**
-     * config structure 
-     * https://www.npmjs.com/package/jsonwebtoken
-     {
-        key: 'xxxxxx', // any value
-        options: {
-            algorithm: "HS256",
-            expiresIn: "30m",
-            issuer: "issuer"
-        }
-     }
-     **/
+// Configuration
+const tokenExpiration = 60; // Token expiration in minutes
 
+// Array to store key pairs
+const keyPairs = new Map();
 
-    constructor(config) {
-        this.config = config
-        this.config['key'] = uid.generate(40)
-    }
+// Map to store authenticated user
+const users = new Map();
 
-    async generateToken({ user_id }) {
-        try {
-            const { key, options } = this.config
-            const result = {
-                token: jwt.sign({ user_id }, key, options),
-            }
-            return result.token;
-        } catch (err) {
-            return null
-        }
-    }
+// TODO: user can have multiple sessions
+const activeSessions = new Map();
 
-    async getUserId(req) {
-        try {
-            let { user_id } = await this.wsCheck(req)
-            return user_id
-        } catch (err) {
-            return null
-        }
-    }
+// crud.listen('createDocument', function (data) {
+//     if (data.document && data.document[0] && data.document[0].type === 'keyPair')
+//         keyPairs.set(data.document[0]._id, data.document[0]);
+// });
 
-    getTokenFromCookie(cookie) {
-        let token = null;
-        if (cookie) {
-            cookie.split(';').forEach((c) => {
-                try {
-                    var parts = c.split('=')
-                    if (parts[0].trim() == 'token') {
-                        token = decodeURI(parts[1].trim());
-                    }
-                } catch (err) {
-                    console.log(err)
-                }
-            })
-        }
-        return token;
-    }
+// crud.listen('deleteDocument', function (data) {
+//     if (data.document && data.document[0] && data.document[0].type === 'keyPair')
+//         keyPairs.delete(data.document[0]._id);
+// });
 
-    async wsCheck(req) {
-        const headers = req.headers
-        let token = headers['sec-websocket-protocol'];
-        // let token = this.getTokenFromCookie(headers.cookie);
-        // if (!token) {
-        //     token = headers['sec-websocket-protocol'];
-        // }
+// Create new RSA key pair
+function createKeyPair() {
+    const { privateKey, publicKey } = jwt.generateKeyPairSync('rsa', {
+        modulusLength: 2048,
+    });
 
-        let result = null;
-        if (token && token !== 'null') {
-            result = await this.verifiyToken(token);
-        }
+    const keyPair = {
+        _id: crud.ObjectId(),
+        privateKey,
+        publicKey,
+        created: new Date().getTime(), // Store as timestamp
+        expires: new Date().getTime() + tokenExpiration * 60 * 1000 * 2, // Convert minutes to milliseconds
+    };
 
-        return result;
-    }
+    keyPairs.set(keyPair._id, keyPair);
 
-    async httpCheck(req) {
+    // crud.createDocument({
+    //     collection: 'keys',
+    //     document: {
+    //         ...keyPair,
+    //     },
+    //     organization_id: process.env.organization_id,
+    // });
 
-    }
+    return keyPair;
+}
 
-    async verifiyToken(token) {
-        try {
-            let decoded = await jwt.verify(token, this.config.key)
-            return decoded;
-        } catch (err) {
-            if (err.message === 'jwt expired') {
-                console.log('Expired Token')
-                return null
-            } else if (err.message === 'invalid token') {
-                console.log('Invalid Token')
-                return null
-            } else {
-                console.log('Invalid token', token)
-                return null;
-            }
-        }
+// Function to retrieve keys from the database (example using CRUD operations)
+function readKeyPairs() {
+    const keys = crud.readDocument({
+        collection: 'keys',
+        filter: {
+            query: [
+                { name: 'type', value: 'keyPair' },
+            ],
+        },
+        organization_id: process.env.organization_id,
+    });
 
+    // Add retrieved key pairs to the keyPairs array
+    if (keys.document && keys.document.length) {
+        keys.document.forEach((keyPair) => {
+            keyPairs.set(keyPair._id, keyPair);
+        });
     }
 }
 
-module.exports = CoCreateAuthenticate;
+// Delete new RSA key pair
+function deleteKeyPair(keyPair) {
+    keyPairs.delete(keyPair._id)
+    // crud.deleteDocument({
+    //     collection: 'keys',
+    //     document: {
+    //         _id: keyPair._id,
+    //         type: 'keyPair'
+    //     },
+    //     organization_id: process.env.organization_id,
+    // });
+}
+
+// Function to sign a new token using the newest keyPair
+function encodeToken(payload) {
+    let keyPair = null
+    const currentTime = new Date().getTime();
+    for (let [key, value] of keyPairs) {
+        if (currentTime > value.expires) {
+            deleteKeyPair(value);
+        } else {
+            keyPair = value
+        }
+    }
+
+    if (!keyPair) {
+        keyPair = createKeyPair();
+    }
+
+    // TODO: payload could have previous user ip and device information which we could use to comapre to current ip and device information 
+
+    const token = jwt.sign(payload, keyPair.privateKey, { expiresIn: tokenExpiration * 60 });
+    users.set(token, { _id: payload.user._id, expires: new Date().getTime() + tokenExpiration * 60 * 1000 })
+    return token;
+}
+
+// Verify and decode a token using the available keys
+function decodeToken(req) {
+    const headers = req.headers;
+    const token = headers['sec-websocket-protocol'];
+    const currentTime = new Date().getTime();
+
+    let user = users.get(token)
+    if (user && currentTime < user.expires)
+        return user._id;
+
+    users.delete(token)
+    return null
+
+}
+
+// readKeyPairs();
+
+module.exports = { encodeToken, decodeToken };
