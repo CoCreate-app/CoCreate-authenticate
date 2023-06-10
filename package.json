@@ -43,7 +43,7 @@
     "@cocreate/cli": "^1.29.3"
   },
   "dependencies": {
-    "@cocreate/uuid": "^1.4.15",
+    "@cocreate/uuid": "^1.4.16",
     "jsonwebtoken": "^9.0.0"
   }
 }
