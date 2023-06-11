@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.9...v1.0.10) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([72e568d](https://github.com/CoCreate-app/CoCreate-authenticate/commit/72e568d7bccf58576ad3c4c6b2a925cfb514c1a3))
+
 ## [1.0.9](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.8...v1.0.9) (2023-06-11)
 
 
