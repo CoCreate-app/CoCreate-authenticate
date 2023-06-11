@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.14...v1.0.15) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([d5ae4b1](https://github.com/CoCreate-app/CoCreate-authenticate/commit/d5ae4b14d62c930049c4d22ecc3523dca5746d4b))
+
 ## [1.0.14](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.13...v1.0.14) (2023-06-11)
 
 
