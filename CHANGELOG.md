@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.6...v1.0.7) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed hosts to host. the value can be a string or an array of strings ([505788a](https://github.com/CoCreate-app/CoCreate-authenticate/commit/505788a1bb47bf2be4c7e8b9f1d58306d3c0ebf0))
+
 ## [1.0.6](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.5...v1.0.6) (2023-06-10)
 
 
