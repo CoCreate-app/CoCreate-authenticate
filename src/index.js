@@ -12,14 +12,14 @@ const users = new Map();
 // TODO: user can have multiple sessions
 const activeSessions = new Map();
 
-// crud.listen('createDocument', function (data) {
-//     if (data.document && data.document[0] && data.document[0].type === 'keyPair')
-//         keyPairs.set(data.document[0]._id, data.document[0]);
+// crud.listen('create.object', function (data) {
+//     if (data.object && data.object[0] && data.object[0].type === 'keyPair')
+//         keyPairs.set(data.object[0]._id, data.object[0]);
 // });
 
-// crud.listen('deleteDocument', function (data) {
-//     if (data.document && data.document[0] && data.document[0].type === 'keyPair')
-//         keyPairs.delete(data.document[0]._id);
+// crud.listen('delete.object', function (data) {
+//     if (data.object && data.object[0] && data.object[0].type === 'keyPair')
+//         keyPairs.delete(data.object[0]._id);
 // });
 
 // Create new RSA key pair
@@ -38,9 +38,10 @@ function createKeyPair() {
 
     keyPairs.set(keyPair._id, keyPair);
 
-    // crud.createDocument({
-    //     collection: 'keys',
-    //     document: {
+    // crud.send({
+    //     method: 'create.object',
+    //     array: 'keys',
+    //     object: {
     //         ...keyPair,
     //     },
     //     organization_id: process.env.organization_id,
@@ -51,8 +52,9 @@ function createKeyPair() {
 
 // Function to retrieve keys from the database (example using CRUD operations)
 function readKeyPairs() {
-    const keys = crud.readDocument({
-        collection: 'keys',
+    const keys = crud.send({
+        method: 'read.object',
+        array: 'keys',
         filter: {
             query: [
                 { name: 'type', value: 'keyPair' },
@@ -62,8 +64,8 @@ function readKeyPairs() {
     });
 
     // Add retrieved key pairs to the keyPairs array
-    if (keys.document && keys.document.length) {
-        keys.document.forEach((keyPair) => {
+    if (keys.object && keys.object.length) {
+        keys.object.forEach((keyPair) => {
             keyPairs.set(keyPair._id, keyPair);
         });
     }
@@ -72,9 +74,10 @@ function readKeyPairs() {
 // Delete new RSA key pair
 function deleteKeyPair(keyPair) {
     keyPairs.delete(keyPair._id)
-    // crud.deleteDocument({
-    //     collection: 'keys',
-    //     document: {
+    // crud.send({
+    //     method: 'delete.object',
+    //     array: 'keys',
+    //     object: {
     //         _id: keyPair._id,
     //         type: 'keyPair'
     //     },
