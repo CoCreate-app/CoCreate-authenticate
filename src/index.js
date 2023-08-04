@@ -57,7 +57,7 @@ function readKeyPairs() {
         array: 'keys',
         filter: {
             query: [
-                { name: 'type', value: 'keyPair' },
+                { key: 'type', value: 'keyPair' },
             ],
         },
         organization_id: process.env.organization_id,
