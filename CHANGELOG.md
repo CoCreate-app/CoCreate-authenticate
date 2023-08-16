@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.18...v1.1.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([626bca8](https://github.com/CoCreate-app/CoCreate-authenticate/commit/626bca8659eaa87cea1067c35ff07a28a9d2cf56))
+* Refactored *-target to *-selector ([ad7247e](https://github.com/CoCreate-app/CoCreate-authenticate/commit/ad7247eecc4bb3c73a0b32841194fb2a15021cf8))
+
+
+### Features
+
+* name attribute and variable renamed to key ([e695800](https://github.com/CoCreate-app/CoCreate-authenticate/commit/e695800527c17d6ce7dd7f91825a7f99408064d6))
+
 ## [1.0.18](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.0.17...v1.0.18) (2023-06-14)
 
 
