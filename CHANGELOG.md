@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.2.0...v1.2.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([9aad32b](https://github.com/CoCreate-app/CoCreate-authenticate/commit/9aad32b1f5f901fc812ff9f4fea20258ab64ed8e))
+* replace cdn with /dist ([666474e](https://github.com/CoCreate-app/CoCreate-authenticate/commit/666474eb88a6b1deddd53f674bb418e0e742fcb7))
+* update file uploader ([153ab34](https://github.com/CoCreate-app/CoCreate-authenticate/commit/153ab34c853963f6254abb234459254b69d8398f))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.1.0...v1.2.0) (2023-08-17)
 
 
