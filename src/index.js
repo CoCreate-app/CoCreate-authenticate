@@ -55,10 +55,12 @@ function readKeyPairs() {
     const keys = crud.send({
         method: 'read.object',
         array: 'keys',
-        filter: {
-            query: [
-                { key: 'type', value: 'keyPair' },
-            ],
+        object: {
+            $filter: {
+                query: [
+                    { key: 'type', value: 'keyPair' },
+                ],
+            }
         },
         organization_id: process.env.organization_id,
     });
