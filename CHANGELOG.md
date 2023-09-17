@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.2...v1.3.3) (2023-09-17)
+
+
+### Bug Fixes
+
+* object.$filter ([18c659f](https://github.com/CoCreate-app/CoCreate-authenticate/commit/18c659f2f1778a2ba42417b136f4b3db4856a9f5))
+
 ## [1.3.2](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.1...v1.3.2) (2023-08-21)
 
 
