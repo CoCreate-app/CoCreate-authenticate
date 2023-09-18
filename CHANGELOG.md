@@ -1,3 +1,11 @@
+## [1.3.4](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.3...v1.3.4) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([7e9b31e](https://github.com/CoCreate-app/CoCreate-authenticate/commit/7e9b31e98800781ab00f1f2f907422791e27113a))
+* Update dCoCreate dpendencies to latest versions ([d40f90a](https://github.com/CoCreate-app/CoCreate-authenticate/commit/d40f90a9c9484252dbe4e24d1ff6509ab7b5aa74))
+
 ## [1.3.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.2...v1.3.3) (2023-09-17)
 
 
