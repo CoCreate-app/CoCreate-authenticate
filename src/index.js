@@ -111,9 +111,7 @@ function encodeToken(payload) {
 }
 
 // Verify and decode a token using the available keys
-function decodeToken(req) {
-    const headers = req.headers;
-    const token = headers['sec-websocket-protocol'];
+function decodeToken(token) {
     const currentTime = new Date().getTime();
 
     let user = users.get(token)
