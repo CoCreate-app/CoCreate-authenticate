@@ -116,7 +116,7 @@ function decodeToken(token) {
 
     let user = users.get(token)
     if (user && currentTime < user.expires)
-        return user._id;
+        return { user_id: user._id, expires: user.expires };
 
     users.delete(token)
     return null
