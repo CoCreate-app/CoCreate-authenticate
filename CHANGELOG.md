@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.5...v1.3.6) (2023-10-09)
+
+
+### Bug Fixes
+
+* bump cocreate dependency versions ([16becc3](https://github.com/CoCreate-app/CoCreate-authenticate/commit/16becc33bfd53761e7d308f6272c9e4aa59043d9))
+* return empty object if null ([9c7445e](https://github.com/CoCreate-app/CoCreate-authenticate/commit/9c7445ecfcf1d580a23a9202339d461c308ed9c8))
+
 ## [1.3.5](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.4...v1.3.5) (2023-10-09)
 
 
