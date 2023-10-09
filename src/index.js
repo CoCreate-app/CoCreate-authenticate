@@ -119,7 +119,7 @@ function decodeToken(token) {
         return { user_id: user._id, expires: user.expires };
 
     users.delete(token)
-    return null
+    return {}
 
 }
 
