@@ -1,3 +1,11 @@
+## [1.3.5](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.4...v1.3.5) (2023-10-09)
+
+
+### Bug Fixes
+
+* decodeToken accepts a token ([bfd47fb](https://github.com/CoCreate-app/CoCreate-authenticate/commit/bfd47fb27d6285245c765918fb572713ba500ef6))
+* return user_id and expiration ([58e9e4b](https://github.com/CoCreate-app/CoCreate-authenticate/commit/58e9e4b73522f1157bd1f26223a6e2fbd3e69f4a))
+
 ## [1.3.4](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.3...v1.3.4) (2023-09-18)
 
 
