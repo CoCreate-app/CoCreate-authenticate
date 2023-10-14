@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.7...v1.3.8) (2023-10-14)
+
+
+### Bug Fixes
+
+* bump dependencies ([d7f206e](https://github.com/CoCreate-app/CoCreate-authenticate/commit/d7f206eb78b2604ae9f0f692805115b043f84a6b))
+
 ## [1.3.7](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.6...v1.3.7) (2023-10-09)
 
 
