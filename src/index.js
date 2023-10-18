@@ -1,4 +1,6 @@
+const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
+const { ObjectId } = require('@cocreate/utils');
 
 // Configuration
 const tokenExpiration = 60; // Token expiration in minutes
@@ -24,12 +26,12 @@ const activeSessions = new Map();
 
 // Create new RSA key pair
 function createKeyPair() {
-    const { privateKey, publicKey } = jwt.generateKeyPairSync('rsa', {
+    const { privateKey, publicKey } = crypto.generateKeyPairSync('rsa', {
         modulusLength: 2048,
     });
 
     const keyPair = {
-        _id: crud.ObjectId(),
+        _id: ObjectId(),
         privateKey,
         publicKey,
         created: new Date().getTime(), // Store as timestamp
@@ -105,8 +107,8 @@ function encodeToken(payload) {
 
     // TODO: payload could have previous user ip and device information which we could use to comapre to current ip and device information 
 
-    const token = jwt.sign(payload, keyPair.privateKey, { expiresIn: tokenExpiration * 60 });
-    users.set(token, { _id: payload.user._id, expires: new Date().getTime() + tokenExpiration * 60 * 1000 })
+    const token = jwt.sign(payload, keyPair.privateKey, { algorithm: 'RS256', expiresIn: tokenExpiration * 60 });
+    users.set(token, { _id: payload.user_id, expires: new Date().getTime() + tokenExpiration * 60 * 1000 })
     return token;
 }
 
