@@ -1,3 +1,11 @@
+## [1.3.9](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.8...v1.3.9) (2023-10-19)
+
+
+### Bug Fixes
+
+* added '@cocreate/utils' for ObjectId() ([aabc2f3](https://github.com/CoCreate-app/CoCreate-authenticate/commit/aabc2f3aa89aa39c93a50aca76b96c4a6c3da093))
+* key creation ([71b759d](https://github.com/CoCreate-app/CoCreate-authenticate/commit/71b759d216da7b30a2f5fb94d6783ac0ff52cdc1))
+
 ## [1.3.8](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.3.7...v1.3.8) (2023-10-14)
 
 
