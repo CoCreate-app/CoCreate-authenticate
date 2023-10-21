@@ -31,7 +31,7 @@ function createKeyPair() {
     });
 
     const keyPair = {
-        _id: ObjectId(),
+        _id: ObjectId().toString(),
         privateKey,
         publicKey,
         created: new Date().getTime(), // Store as timestamp
