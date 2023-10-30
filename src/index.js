@@ -41,7 +41,7 @@ function createKeyPair() {
     keyPairs.set(keyPair._id, keyPair);
 
     // crud.send({
-    //     method: 'create.object',
+    //     method: 'object.create',
     //     array: 'keys',
     //     object: {
     //         ...keyPair,
@@ -55,7 +55,7 @@ function createKeyPair() {
 // Function to retrieve keys from the database (example using CRUD operations)
 function readKeyPairs() {
     const keys = crud.send({
-        method: 'read.object',
+        method: 'object.read',
         array: 'keys',
         object: {
             $filter: {
@@ -79,7 +79,7 @@ function readKeyPairs() {
 function deleteKeyPair(keyPair) {
     keyPairs.delete(keyPair._id)
     // crud.send({
-    //     method: 'delete.object',
+    //     method: 'object.delete',
     //     array: 'keys',
     //     object: {
     //         _id: keyPair._id,
