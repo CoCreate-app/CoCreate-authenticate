@@ -14,12 +14,12 @@ const users = new Map();
 // TODO: user can have multiple sessions
 const activeSessions = new Map();
 
-// crud.listen('create.object', function (data) {
+// crud.listen('object.create', function (data) {
 //     if (data.object && data.object[0] && data.object[0].type === 'keyPair')
 //         keyPairs.set(data.object[0]._id, data.object[0]);
 // });
 
-// crud.listen('delete.object', function (data) {
+// crud.listen('object.delete', function (data) {
 //     if (data.object && data.object[0] && data.object[0].type === 'keyPair')
 //         keyPairs.delete(data.object[0]._id);
 // });
