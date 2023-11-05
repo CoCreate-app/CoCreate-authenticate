@@ -30,12 +30,13 @@ function createKeyPair() {
         modulusLength: 2048,
     });
 
+    let created = new Date(new Date().toISOString()).getTime()
     const keyPair = {
         _id: ObjectId().toString(),
         privateKey,
         publicKey,
-        created: new Date().getTime(), // Store as timestamp
-        expires: new Date().getTime() + tokenExpiration * 60 * 1000 * 2, // Convert minutes to milliseconds
+        created,
+        expires: created + tokenExpiration * 60 * 1000, // Convert minutes to milliseconds
     };
 
     keyPairs.set(keyPair._id, keyPair);
@@ -92,7 +93,7 @@ function deleteKeyPair(keyPair) {
 // Function to sign a new token using the newest keyPair
 function encodeToken(payload) {
     let keyPair = null
-    const currentTime = new Date().getTime();
+    const currentTime = new Date(new Date().toISOString()).getTime();
     for (let [key, value] of keyPairs) {
         if (currentTime > value.expires) {
             deleteKeyPair(value);
@@ -108,7 +109,7 @@ function encodeToken(payload) {
     // TODO: payload could have previous user ip and device information which we could use to comapre to current ip and device information 
 
     const token = jwt.sign(payload, keyPair.privateKey, { algorithm: 'RS256', expiresIn: tokenExpiration * 60 });
-    users.set(token, { _id: payload.user_id, expires: new Date().getTime() + tokenExpiration * 60 * 1000 })
+    users.set(token, { _id: payload.user_id, expires: currentTime + tokenExpiration * 60 * 1000 })
     return token;
 }
 
