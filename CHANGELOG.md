@@ -1,3 +1,13 @@
+## [1.4.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.4.2...v1.4.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* date update to ISO format ([eaf2a77](https://github.com/CoCreate-app/CoCreate-authenticate/commit/eaf2a77ff6503021354ae2917279c011ea0fd4f8))
+* meta name typo ([a7299c0](https://github.com/CoCreate-app/CoCreate-authenticate/commit/a7299c0406bbf96e46af9c6e575fe699e4d94773))
+* update crud methods ([e9d0ff0](https://github.com/CoCreate-app/CoCreate-authenticate/commit/e9d0ff09003c2f6e7cde50ec307c3f786bdca0a0))
+* update host ([71a7281](https://github.com/CoCreate-app/CoCreate-authenticate/commit/71a7281a96aa10c79c0e9fcd5a50c852a6d89ef3))
+
 ## [1.4.2](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.4.1...v1.4.2) (2023-11-03)
 
 
