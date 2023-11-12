@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.4.3...v1.4.4) (2023-11-12)
+
+
+### Bug Fixes
+
+* bump dependencies for latest features ([7ace0aa](https://github.com/CoCreate-app/CoCreate-authenticate/commit/7ace0aad830f29823ac86bf7dad2a5aca834dba0))
+
 ## [1.4.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.4.2...v1.4.3) (2023-11-09)
 
 
