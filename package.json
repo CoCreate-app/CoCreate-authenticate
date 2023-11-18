@@ -40,7 +40,7 @@
   "main": "./src/index.js",
   "homepage": "https://cocreate.app/docs/authenticate",
   "dependencies": {
-    "@cocreate/utils": "^1.27.1",
+    "@cocreate/utils": "^1.27.4",
     "jsonwebtoken": "^9.0.0"
   }
 }
