@@ -72,21 +72,12 @@ We appreciate your continued support, thank you!
 
 <a name="license"></a>
 
-# Dual License
+# License
 
-## Open Source
+This software is dual-licensed under the GNU Affero General Public License version 3 (AGPLv3) and a commercial license.
 
-[Server Side Public License (SSPL)](https://github.com/CoCreate-app/CoCreate-authenticate/blob/master/LICENSE)
+-   **Open Source Use**: For open-source projects and non-commercial use, this software is available under the AGPLv3. The AGPLv3 allows you to freely use, modify, and distribute this software, provided that all modifications and derivative works are also licensed under the AGPLv3. For the full license text, see the [LICENSE file](https://github.com/CoCreate-app/CoCreate-authenticate/blob/master/LICENSE).
 
-## Commercial
+-   **Commercial Use**: For-profit companies and individuals intending to use this software for commercial purposes must obtain a commercial license. The commercial license is available when you sign up for an API key on our [website](https://cocreate.app). This license permits proprietary use and modification of the software without the copyleft requirements of the AGPLv3. It is ideal for integrating this software into proprietary commercial products and applications.
 
-For-profit companies and individuals intending to use CoCreate-authenticate for
-commercial use must purchase a commercial license. This license allows
-source code modifications, but does not permit redistribution of
-modifications.
-
-The commercial license is designed for you to use CoCreate-authenticate in commercial
-products and applications, without the provisions of the SSPL. With the
-commercial license, your code is kept propietary, to yourself. If you
-want to use CoCreate-authenticate to develop commercial sites, themes, projects, and
-applications, the commercial license is the appropriate license.
+If you have not purchased a commercial license and intend to use this software for commercial purposes, you are required to sign up for an API key on our website.
