@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.6.0...v1.7.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* update licensing details ([3fa12ff](https://github.com/CoCreate-app/CoCreate-authenticate/commit/3fa12ffeafaf22ae1121c567d0ff735cc4b735a3))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([850fdc1](https://github.com/CoCreate-app/CoCreate-authenticate/commit/850fdc199c7288e2c95eadae5bda6a23d09fe192))
+
 # [1.6.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.5.0...v1.6.0) (2023-11-25)
 
 
