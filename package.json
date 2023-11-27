@@ -33,14 +33,13 @@
     "type": "git",
     "url": "git+https://github.com/CoCreate-app/CoCreate-authenticate.git"
   },
-  "authenticateor": "CoCreate LLC",
+  "author": "CoCreate LLC",
   "bugs": {
     "url": "https://github.com/CoCreate-app/CoCreate-authenticate/issues"
   },
   "main": "./src/index.js",
   "homepage": "https://cocreate.app/docs/authenticate",
   "dependencies": {
-    "@cocreate/utils": "^1.29.0",
     "jsonwebtoken": "^9.0.0"
   }
 }
