@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.7.0...v1.8.0) (2023-12-05)
+
+
+### Bug Fixes
+
+* removed "@cocreate/utlis" ([3726368](https://github.com/CoCreate-app/CoCreate-authenticate/commit/372636836f00c830c31baa6e85e138075ec510af))
+
+
+### Features
+
+* manage sessions using crud ([81a3d9b](https://github.com/CoCreate-app/CoCreate-authenticate/commit/81a3d9b15402b305f61ad23d6699e30277f1a0bd))
+
 # [1.7.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.6.0...v1.7.0) (2023-11-25)
 
 
