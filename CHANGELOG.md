@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.8.0...v1.9.0) (2024-01-08)
+
+
+### Bug Fixes
+
+* applied host to define environment/branch ([4f99d72](https://github.com/CoCreate-app/CoCreate-authenticate/commit/4f99d72aa822e5d7ea36beee81fe75153a0d2ca5))
+
+
+### Features
+
+* bumped CoCreate dependencies to their latest versions ([d57103d](https://github.com/CoCreate-app/CoCreate-authenticate/commit/d57103dae51984d00d99032e45fc23263f955bc0))
+
 # [1.8.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.7.0...v1.8.0) (2023-12-05)
 
 
