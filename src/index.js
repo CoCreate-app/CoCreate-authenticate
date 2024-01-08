@@ -59,7 +59,7 @@ class CoCreateAuthenticate {
     }
 
     // Function to sign a new token using the newest keyPair
-    encodeToken(organization_id, user_id, clientId) {
+    encodeToken(organization_id, user_id, clientId, host) {
         let keyPair = null
         const currentTime = new Date(new Date().toISOString()).getTime();
         for (let [key, value] of keyPairs) {
@@ -82,6 +82,7 @@ class CoCreateAuthenticate {
 
         this.crud.send({
             method: 'object.update',
+            host,
             array: 'clients',
             object: {
                 _id: clientId,
@@ -95,14 +96,14 @@ class CoCreateAuthenticate {
     }
 
     // Verify and decode a token using the available keys
-    async decodeToken(token, organization_id, clientId) {
+    async decodeToken(token, organization_id, clientId, host) {
         if (!token)
             return {}
         const currentTime = new Date().getTime();
 
         let session = sessions.get(clientId)
         if (!session || session.token !== token)
-            session = await this.read(organization_id, clientId)
+            session = await this.read(organization_id, clientId, host)
 
         // TODO: request must be made from same clientId and user_id that created the token
         if (session && currentTime < session.expires && session.token === token)
@@ -111,6 +112,7 @@ class CoCreateAuthenticate {
         sessions.delete(clientId)
         this.crud.send({
             method: 'object.update',
+            host,
             array: 'clients',
             object: {
                 _id: clientId,
@@ -123,9 +125,10 @@ class CoCreateAuthenticate {
 
     }
 
-    async read(organization_id, clientId) {
+    async read(organization_id, clientId, host) {
         const client = await this.crud.send({
             method: 'object.read',
+            host,
             array: 'clients',
             object: {
                 _id: clientId
