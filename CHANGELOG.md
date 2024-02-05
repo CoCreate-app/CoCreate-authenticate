@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.9.0...v1.9.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* Removed https://cdn.cocreate.app/latest/CoCreate.min.css ([f808cc1](https://github.com/CoCreate-app/CoCreate-authenticate/commit/f808cc14d5c7780fb036042686a671482a32c9a9))
+
 # [1.9.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.8.0...v1.9.0) (2024-01-08)
 
 
