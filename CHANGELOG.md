@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.9.3...v1.9.4) (2024-10-31)
+
+
+### Bug Fixes
+
+* read return only if session ([32dc8b8](https://github.com/CoCreate-app/CoCreate-authenticate/commit/32dc8b874532435003acbee3f432aedd925b9bdb))
+
 ## [1.9.3](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.9.2...v1.9.3) (2024-06-23)
 
 
