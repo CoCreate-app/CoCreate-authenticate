@@ -138,9 +138,9 @@ class CoCreateAuthenticate {
 
         if (client.object && client.object.length) {
             sessions.set(clientId, client.object[0].session)
+            return client.object[0].session
         }
 
-        return client.object[0].session
     }
 
 }
