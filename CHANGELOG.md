@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.10.0...v1.10.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* webpack.config and devdependencies ([91d3b8d](https://github.com/CoCreate-app/CoCreate-authenticate/commit/91d3b8dd68321d166d49892c599942cd6ed9576d))
+
 # [1.10.0](https://github.com/CoCreate-app/CoCreate-authenticate/compare/v1.9.4...v1.10.0) (2024-11-04)
 
 
